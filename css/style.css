@@ -1,0 +1,31 @@
+.chartContainer {
+    width:32vw;
+    height: 80vh;
+    padding: 1rem;
+}
+
+.brand-chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 0.2rem solid black ;
+    border-radius: 1rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.brand-chart-parent {
+    width:15vw;
+}
+
+.brand-chart-text-container {
+    text-align: center;
+}
+
+.branding-percentage {
+    font-weight: bold;
+    font-size: xx-large;
+
+}
