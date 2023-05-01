@@ -1,11 +1,12 @@
  <?php
 //    Variable en PHP
-    $branding = 25;
+    $branding = 350;
     $organic_growth = 18;
     $total_growth = 50;
     $seo_level = 42;
     $sales = 80;
     $projected_earnings = 120000;
+    $countries_list = json_encode(array('US', 'CA', 'MX', 'CO', 'ES'));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +46,7 @@
         </div>
         <!--     Map PLACEHOLDER       -->
         <div class="world-map-container">
-            <canvas id="world-map-chart"></canvas>
+                <div id="chartdiv"></div>
         </div>
         <div class="left-down-container">
             <div class="total-growth-container">
@@ -121,8 +122,14 @@
         let organicGrowth = <?= $organic_growth ?>;
         let totalGrowth = <?= $total_growth ?>;
         let seoLevel = <?= $seo_level ?>;
+        let countriesList = <?= $countries_list ?>;
     </script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/map-chart.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

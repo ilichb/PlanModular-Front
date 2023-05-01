@@ -61,9 +61,10 @@
 
 .world-map-container{
     margin: 2rem 0 0 0;
-    background-color: rebeccapurple;
     height: 60vh;
     width: 40vh;
+    border: 0.2rem solid black ;
+    border-radius: 1rem;
 }
 
 .left-down-container {
@@ -185,4 +186,8 @@
 
 .projected-earnings-linear-parent {
     width: 25vw;
+}
+
+#chartdiv {
+    height: 60vh;
 }
