@@ -1,0 +1,13 @@
+@use 'base';
+
+.seo-container {
+    @extend %container-borders;
+}
+
+.seo-pie-chart-container{
+    @extend %pie-container;
+}
+
+#seo-pie {
+    @include base.chart;
+}

@@ -1,0 +1,14 @@
+@use "base";
+
+.projected-earnings-container {
+  @extend %container-borders;
+}
+
+.projected-earnings-box {
+  @extend %container-borders;
+  text-align: center;
+}
+
+#projected-earnings-linear {
+  @include base.chart(13vh);
+}

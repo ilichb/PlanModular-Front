@@ -1,0 +1,9 @@
+@use "base";
+
+.socials-container {
+    @extend %container-borders;
+}
+
+#socials-radar {
+  @include base.chart(30vh);
+}

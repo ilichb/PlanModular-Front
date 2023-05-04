@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "sass": "sass --watch src/stylesheets/main.scss styles.css",
-    "bundle": "webpack --watch --progress"
+    "bundle": "webpack --mode development --watch"
   },
   "author": "",
   "license": "ISC",

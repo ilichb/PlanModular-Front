@@ -1,0 +1,9 @@
+@use 'base';
+
+.bounce-container {
+    @extend %container-borders;
+}
+
+#bounce-bar {
+    @include base.chart;
+}

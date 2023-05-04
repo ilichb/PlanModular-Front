@@ -1,0 +1,21 @@
+@use 'base';
+
+.sales-container {
+  @extend %container-borders;
+}
+
+.sales-pie-chart-container {
+  @extend %pie-container;
+}
+
+.sales-block-percentage {
+  @include base.pie-percentage($color: white)
+}
+
+#sales-pie {
+  @include base.chart;
+}
+
+#sales-bar {
+  @include base.chart(30vh);
+}

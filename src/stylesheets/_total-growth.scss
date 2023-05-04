@@ -1,0 +1,17 @@
+@use 'base';
+
+.total-growth-container {
+  @extend %container-borders;
+}
+
+.total-growth-pie-chart-container {
+  @extend %pie-container;
+}
+
+#total-growth-pie {
+  @include base.chart;
+}
+
+#total-growth-linear {
+  @include base.chart(13vh);
+}

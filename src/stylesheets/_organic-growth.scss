@@ -1,0 +1,17 @@
+@use 'base';
+
+.organic-growth-container {
+  @extend %container-borders;
+}
+
+.organic-growth-pie-chart-container {
+  @extend %pie-container
+}
+
+#organic-growth-pie {
+  @include base.chart;
+}
+
+#organic-growth-linear {
+  @include base.chart(13vh);
+}

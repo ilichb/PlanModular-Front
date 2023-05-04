@@ -1,0 +1,9 @@
+@use 'base';
+
+.potential-reach-container {
+  @extend %container-borders;
+}
+
+#potential-reach-map {
+  height: 20vh;
+}

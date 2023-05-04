@@ -1,40 +1,14 @@
-//$
+@use "base";
+@use 'branding';
+@use 'organic-growth';
+@use "map";
+@use "total-growth";
+@use "seo";
+@use "socials";
+@use "bounce-rate";
+@use "sales";
+@use "projected-earnings";
 
-.branding-container {
-  border: 1px solid black;
-  border-radius: 5px;
-}
-
-.branding-chart-container {
-  position: relative;
-}
-
-.title {
-  margin: 0;
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  font-family: 'Roboto', sans-serif;
-}
-
-
-#branding-pie {
-  height: 20vh;
-  margin-bottom: 1rem;
-}
-
-.branding-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin-top: 0;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  font-family: 'Roboto', sans-serif;
+.container-title {
+  @include base.container-title;
 }

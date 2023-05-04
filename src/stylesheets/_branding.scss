@@ -1,0 +1,17 @@
+@use 'base';
+
+.branding-container {
+  @extend %container-borders;
+}
+
+.branding-chart-container {
+  @extend %pie-container;
+}
+
+#branding-pie {
+  @include base.chart;
+}
+
+.branding-text {
+  @include base.pie-percentage;
+}
