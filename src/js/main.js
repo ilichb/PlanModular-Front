@@ -1,11 +1,11 @@
-export {brandingPieChart, brandingPieSeries} from "./pie/branding.js";
-export {organicGrowthPieChart, organicGrowthPieSeries} from "./pie/organic-growth.js";
-export {chart} from "./map.js"
-export {totalGrowthPieChart} from "./pie/total-growth.js";
+import {chart} from "./map.js"
 
 import {
     seoPieChart,
-    salesPieChart
+    salesPieChart,
+    totalGrowthPieChart,
+    organicGrowthPieChart,
+    brandingPieChart
 } from "./pie";
 
 import {

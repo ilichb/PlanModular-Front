@@ -4,8 +4,9 @@
   "description": "Sistema de marketing modular solo frontend",
   "private": true,
   "scripts": {
+    "bundle": "webpack --mode production && sass src/stylesheets/main.scss styles.css",
     "sass": "sass --watch src/stylesheets/main.scss styles.css",
-    "bundle": "webpack --mode development --watch"
+    "webapack": "webpack --mode development --watch"
   },
   "author": "",
   "license": "ISC",

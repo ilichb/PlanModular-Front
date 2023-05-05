@@ -19,3 +19,36 @@
 #sales-bar {
   @include base.chart(30vh);
 }
+
+@media (min-width: 768px) {
+  #sales-pie,  {
+    height: 25vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  #sales-pie,  {
+    height: 35vh;
+  }
+
+  #sales-bar,  {
+    height: 35vh;
+  }
+}
+
+@media (min-width: 1280px) {
+    .sales-container,  {
+        width: 20vw;
+        margin: 1rem 0 0 1rem;
+    }
+
+    #sales-pie,  {
+        height: 23vh;
+    }
+
+    #sales-bar,  {
+        //height: 15vh;
+        width: 100%;
+    }
+
+}
