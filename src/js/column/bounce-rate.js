@@ -1,5 +1,8 @@
-let bounceRateBar = am5.Root.new("bounce-bar");
+import * as am5 from "@amcharts/amcharts5";
+import * as am5xy from "@amcharts/amcharts5/xy";
 
+let bounceRateBar = am5.Root.new("bounce-bar");
+bounceRateBar._logo.dispose();
 export let bounceRateBarChart = bounceRateBar.container.children.push(
     am5xy.XYChart.new(bounceRateBar, {})
 );

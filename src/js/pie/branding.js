@@ -1,4 +1,8 @@
+import * as am5 from "@amcharts/amcharts5";
+import * as am5percent from "@amcharts/amcharts5/percent";
+
 let brandingPie = am5.Root.new('branding-pie')
+brandingPie._logo.dispose();
 export let brandingPieChart = brandingPie.container.children.push(
     am5percent.PieChart.new(brandingPie, {
         radius: am5.percent(90),

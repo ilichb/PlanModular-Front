@@ -1,5 +1,9 @@
-let socialsRadar = am5.Root.new("socials-radar");
+import * as am5 from "@amcharts/amcharts5";
+import * as am5xy from "@amcharts/amcharts5/xy";
+import * as am5radar from "@amcharts/amcharts5/radar";
 
+let socialsRadar = am5.Root.new("socials-radar");
+socialsRadar._logo.dispose();
 export let socialsRadarChart = socialsRadar.container.children.push(
     am5radar.RadarChart.new(socialsRadar, {
         startAngle: -180,

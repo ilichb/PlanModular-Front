@@ -1,4 +1,8 @@
+import * as am5 from "@amcharts/amcharts5";
+import * as am5percent from "@amcharts/amcharts5/percent";
+
 let seoPie = am5.Root.new('seo-pie')
+seoPie._logo.dispose();
 export let seoPieChart = seoPie.container.children.push(
     am5percent.PieChart.new(seoPie, {
         radius: am5.percent(90),

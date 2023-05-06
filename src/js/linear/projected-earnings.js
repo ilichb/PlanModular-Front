@@ -1,5 +1,8 @@
-let projectedEarningsLinear = am5.Root.new("projected-earnings-linear");
+import * as am5 from "@amcharts/amcharts5";
+import * as am5xy from "@amcharts/amcharts5/xy";
 
+let projectedEarningsLinear = am5.Root.new("projected-earnings-linear");
+projectedEarningsLinear._logo.dispose();
 export let projectedEarningsLinearChart = projectedEarningsLinear.container.children.push(
     am5xy.XYChart.new(projectedEarningsLinear, {})
 );

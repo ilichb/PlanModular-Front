@@ -400,6 +400,15 @@
     font-size: 2rem;
   }
 }
+.amcharts-credits, .andromeda-credits {
+  margin: 0;
+  text-align: center;
+}
+
+.footer {
+  margin-top: 1rem;
+}
+
 .container-title {
   margin: 0;
   text-align: center;

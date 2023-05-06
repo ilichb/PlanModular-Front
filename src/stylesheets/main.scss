@@ -9,6 +9,15 @@
 @use "sales";
 @use "projected-earnings";
 
+.amcharts-credits, .andromeda-credits {
+  margin: 0;
+  text-align: center;
+}
+
+.footer {
+  margin-top: 1rem;
+}
+
 .container-title {
   @include base.container-title;
 }

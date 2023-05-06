@@ -16,85 +16,92 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
-    <div class="dashboard">
-        <div class="left-container">
-            <div class="left-top">
-                <div class="branding-organic-growth-container">
-                    <div class="branding-container">
-                        <p class="branding-container-title">RECONOCMIENTO DE MARCA</p>
-                        <div class="branding-chart-container">
-                            <div id="branding-pie"></div>
-                            <p class="pie-percentage"><?= $branding ?>%</p>
-                        </div>
-                    </div>
-                    <div class="organic-growth-container">
-                        <div class="organic-growth-title-pie-container">
-                            <p class="organic-growth-container-title">CRECIMIENTO ORGANICO</p>
-                            <div class="organic-growth-pie-chart-container">
-                                <div id="organic-growth-pie"></div>
-                                <p class="pie-percentage"><?= $organic_growth ?>%</p>
+    <div class="main">
+        <div class="dashboard">
+            <div class="left-container">
+                <div class="left-top">
+                    <div class="branding-organic-growth-container">
+                        <div class="branding-container">
+                            <p class="branding-container-title">RECONOCMIENTO DE MARCA</p>
+                            <div class="branding-chart-container">
+                                <div id="branding-pie"></div>
+                                <p class="pie-percentage"><?= $branding ?>%</p>
                             </div>
                         </div>
-                        <div id="organic-growth-linear"></div>
+                        <div class="organic-growth-container">
+                            <div class="organic-growth-title-pie-container">
+                                <p class="organic-growth-container-title">CRECIMIENTO ORGANICO</p>
+                                <div class="organic-growth-pie-chart-container">
+                                    <div id="organic-growth-pie"></div>
+                                    <p class="pie-percentage"><?= $organic_growth ?>%</p>
+                                </div>
+                            </div>
+                            <div id="organic-growth-linear"></div>
+                        </div>
+                    </div>
+                    <div class="potential-reach-container">
+                        <p class="container-title">ALCANCE POTENCIAL</p>
+                        <div id="potential-reach-map"></div>
                     </div>
                 </div>
-                <div class="potential-reach-container">
-                    <p class="container-title">ALCANCE POTENCIAL</p>
-                    <div id="potential-reach-map"></div>
+                <div class="left-down">
+                    <div class="total-growth-seo-container">
+                        <div class="total-growth-container">
+                            <div class="total-growth-title-pie-container">
+                                <p class="total-growth-container-title">CRECIMIENTO TOTAL</p>
+                                <div class="total-growth-pie-chart-container">
+                                    <div id="total-growth-pie"></div>
+                                    <p class="pie-percentage"><?= $total_growth ?>%</p>
+                                </div>
+                            </div>
+                            <div id="total-growth-linear"></div>
+                        </div>
+                        <div class="seo-container">
+                            <p class="container-title">SEO</p>
+                            <div class="seo-pie-chart-container">
+                                <div id="seo-pie"></div>
+                                <p class="pie-percentage"><?= $seo_level ?>%</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="left-down">
-                <div class="total-growth-seo-container">
-                    <div class="total-growth-container">
-                        <div class="total-growth-title-pie-container">
-                            <p class="total-growth-container-title">CRECIMIENTO TOTAL</p>
-                            <div class="total-growth-pie-chart-container">
-                                <div id="total-growth-pie"></div>
-                                <p class="pie-percentage"><?= $total_growth ?>%</p>
-                            </div>
-                        </div>
-                        <div id="total-growth-linear"></div>
+            <div class="right-container">
+                <div class="socials-bounce-container">
+                    <div class="socials-container">
+                        <p class="container-title">PLATAFORMAS SUGERIDAS</p>
+                        <div id="socials-radar"></div>
                     </div>
-                    <div class="seo-container">
-                        <p class="container-title">SEO</p>
-                        <div class="seo-pie-chart-container">
-                            <div id="seo-pie"></div>
-                            <p class="pie-percentage"><?= $seo_level ?>%</p>
+                    <div class="bounce-container">
+                        <p class="container-title">TASA DE REBOTE</p>
+                        <div id="bounce-bar"></div>
+                    </div>
+                </div>
+                <div class="sales-projected-earnings-container">
+                    <div class="sales-container">
+                        <p class="container-title">VENTAS 1er TRIMESTRE</p>
+                        <div class="sales-pie-chart-container">
+                            <div id="sales-pie"></div>
+                            <p class="sales-block-percentage"><?= $sales ?>%</p>
                         </div>
+                        <div id="sales-bar"></div>
+                    </div>
+                    <div class="projected-earnings-container">
+                        <div class="projected-earnings-box">
+                            <p class="container-title">GANANCIAS PROYECTADAS</p>
+                            <p class="projected-earnings-amount">$<?= $projected_earnings ?></p>
+                        </div>
+                        <div id="projected-earnings-linear"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="right-container">
-            <div class="socials-bounce-container">
-                <div class="socials-container">
-                    <p class="container-title">PLATAFORMAS SUGERIDAS</p>
-                    <div id="socials-radar"></div>
-                </div>
-                <div class="bounce-container">
-                    <p class="container-title">TASA DE REBOTE</p>
-                    <div id="bounce-bar"></div>
-                </div>
-            </div>
-            <div class="sales-projected-earnings-container">
-                <div class="sales-container">
-                    <p class="container-title">VENTAS 1er TRIMESTRE</p>
-                    <div class="sales-pie-chart-container">
-                        <div id="sales-pie"></div>
-                        <p class="sales-block-percentage"><?= $sales ?>%</p>
-                    </div>
-                    <div id="sales-bar"></div>
-                </div>
-                <div class="projected-earnings-container">
-                    <div class="projected-earnings-box">
-                        <p class="container-title">GANANCIAS PROYECTADAS</p>
-                        <p class="projected-earnings-amount">$<?= $projected_earnings ?></p>
-                    </div>
-                    <div id="projected-earnings-linear"></div>
-                </div>
-            </div>
+        <div class="footer">
+            <p class="amcharts-credits">Charts provided by amcharts</p>
+            <p class="andromeda-credits">© 2023 Andromeda. All rights reserved.</p>
         </div>
     </div>
+
     <script>
         let branding = <?= $branding ?>;
         let organicGrowth = <?= $organic_growth ?>;
@@ -103,13 +110,6 @@
         let countriesList = <?= $countries_list ?>;
         let sales = <?= $sales ?>;
     </script>
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="bundle.js"></script>
 </body>
 </html>

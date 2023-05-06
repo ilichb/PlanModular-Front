@@ -1,5 +1,8 @@
-let totalGrowthLinear = am5.Root.new("total-growth-linear");
+import * as am5 from "@amcharts/amcharts5";
+import * as am5xy from "@amcharts/amcharts5/xy";
 
+let totalGrowthLinear = am5.Root.new("total-growth-linear");
+totalGrowthLinear._logo.dispose();
 export let totalGrowthLinearChart = totalGrowthLinear.container.children.push(
     am5xy.XYChart.new(totalGrowthLinear, {})
 );

@@ -1,5 +1,8 @@
-let salesBar = am5.Root.new("sales-bar");
+import * as am5 from "@amcharts/amcharts5";
+import * as am5xy from "@amcharts/amcharts5/xy";
 
+let salesBar = am5.Root.new("sales-bar");
+salesBar._logo.dispose();
 export let salesBarChart = salesBar.container.children.push(
     am5xy.XYChart.new(salesBar, {})
 );

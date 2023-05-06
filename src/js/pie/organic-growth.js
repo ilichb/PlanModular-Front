@@ -1,5 +1,8 @@
+import * as am5 from "@amcharts/amcharts5";
+import * as am5percent from "@amcharts/amcharts5/percent";
+
 let organicGrowthPie = am5.Root.new('organic-growth-pie');
-// PIE CHART
+organicGrowthPie._logo.dispose()
 export let organicGrowthPieChart = organicGrowthPie.container.children.push(
     am5percent.PieChart.new(organicGrowthPie, {
         radius: am5.percent(90),

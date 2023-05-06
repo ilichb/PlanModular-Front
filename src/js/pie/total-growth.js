@@ -1,4 +1,8 @@
-let totalGrowthPie = am5.Root.new('total-growth-pie')
+import * as am5 from "@amcharts/amcharts5";
+import * as am5percent from "@amcharts/amcharts5/percent";
+
+let totalGrowthPie = am5.Root.new('total-growth-pie');
+totalGrowthPie._logo.dispose();
 export let totalGrowthPieChart = totalGrowthPie.container.children.push(
     am5percent.PieChart.new(totalGrowthPie, {
         radius: am5.percent(90),

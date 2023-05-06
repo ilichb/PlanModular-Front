@@ -1,4 +1,10 @@
-var root = am5.Root.new("potential-reach-map");
+import * as am5 from "@amcharts/amcharts5";
+import * as am5map from "@amcharts/amcharts5/map";
+import am5geodata_worldLow from "@amcharts/amcharts5-geodata/worldLow";
+import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
+
+let root = am5.Root.new("potential-reach-map");
+root._logo.dispose();
 
 root.setThemes([
     am5themes_Animated.new(root)

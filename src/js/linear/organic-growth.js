@@ -1,5 +1,8 @@
-let organicGrowthLinear = am5.Root.new("organic-growth-linear");
+import * as am5 from "@amcharts/amcharts5";
+import * as am5xy from "@amcharts/amcharts5/xy";
 
+let organicGrowthLinear = am5.Root.new("organic-growth-linear");
+organicGrowthLinear._logo.dispose();
 export let organicGrowthLinearChart = organicGrowthLinear.container.children.push(
     am5xy.XYChart.new(organicGrowthLinear, {})
 );
