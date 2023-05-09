@@ -96,6 +96,30 @@
                 </div>
             </div>
         </div>
+        <div class="form">
+            <p id="test-sector"></p>
+            <p id="test-country"></p>
+            <p id="test-expenses"></p>
+            <p id="test-roi"></p>
+            <div class="buttons-container">
+                <button id="sector" class="form-button">SECTOR COMERCIAL</button>
+                <button id="country" class="form-button">PAIS</button>
+                <button id="service-value" class="form-button">VALOR DE SU SERVICIO PRINCIPAL</button>
+            </div>
+            <div id="sector-container" class="content hidden"></div>
+            <div id="country-container" class="content hidden"></div>
+            <div id="service-value-container" class="content hidden">
+                <label for="expenses-input" class="input-label">Gasto presupestario de Marketing ultimo semestre</label>
+                <input type="text" id="expenses-input" name="expenses">
+
+                <label for="roi-input" class="input-label">ROI ULTIMO SEMESTRE</label>
+                <input type="text" id="roi-input" name="roi">
+            </div>
+            <div class="submit-button-container">
+                <button id="submit-button" class="submit-button">ENVIAR</button>
+            </div>
+            <p id="error-message"></p>
+        </div>
         <div class="footer">
             <p class="amcharts-credits">Charts provided by amcharts</p>
             <p class="andromeda-credits">© 2023 Andromeda. All rights reserved.</p>

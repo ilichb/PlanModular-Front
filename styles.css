@@ -400,6 +400,92 @@
     font-size: 2rem;
   }
 }
+.form {
+  margin: 1rem 1rem;
+}
+
+.buttons-container, .submit-button-container {
+  display: flex;
+  flex-direction: column;
+}
+.buttons-container #submit-button, .submit-button-container #submit-button {
+  margin-top: 2rem;
+}
+.buttons-container button, .submit-button-container button {
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0rem;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+.visible {
+  display: flex;
+  flex-direction: column;
+}
+.visible button {
+  margin: 0.1rem 0rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.input-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0rem 0rem 0rem;
+  text-align: center;
+}
+
+#error-message {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0rem 0rem 0rem;
+  text-align: center;
+}
+
+#sector-container, #country-container, #service-value-container {
+  margin: 2rem;
+}
+
+#country-container {
+  height: 30vh;
+  overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+  .detailed-sector-button {
+    margin: 0.5rem;
+    font-size: large;
+  }
+  .detailed-country-button {
+    margin: 0.5rem;
+    font-size: x-large;
+  }
+}
+@media (min-width: 1280px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .buttons-container {
+    display: flex;
+    flex-direction: row;
+  }
+  #sector, #country, #service-value {
+    margin: 0 1rem;
+  }
+}
 .amcharts-credits, .andromeda-credits {
   margin: 0;
   text-align: center;
