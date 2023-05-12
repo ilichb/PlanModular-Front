@@ -121,7 +121,7 @@
             <p id="error-message"></p>
         </div>
         <div class="footer">
-            <p class="amcharts-credits">Charts provided by amcharts</p>
+            <p class="amcharts-credits">Charts provided by <a href="https://www.amcharts.com/">amcharts</a></p>
             <p class="andromeda-credits">© 2023 Andromeda. All rights reserved.</p>
         </div>
     </div>

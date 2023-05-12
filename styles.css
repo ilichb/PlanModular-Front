@@ -494,6 +494,9 @@
 .footer {
   margin-top: 1rem;
 }
+.footer a {
+  color: black;
+}
 
 .container-title {
   margin: 0;
