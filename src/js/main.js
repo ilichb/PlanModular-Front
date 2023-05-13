@@ -73,8 +73,8 @@ function generateOptions(data, context, target, finalVariable){
     for (let i = 0; i < data.length; i++) {
         let button = document.createElement('button');
         button.classList.add(`detailed-${context}-button`);
-        button.id = data[i].toLowerCase().split(' ').join('-');
-        button.innerHTML = data[i];
+        button.id = data[i].id;
+        button.innerHTML = data[i].name;
         button.addEventListener('click', function () {
             finalVariable = button.id;
             toggleActiveClass(button, `detailed-${context}-button`);
