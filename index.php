@@ -104,10 +104,12 @@
             <div class="buttons-container">
                 <button id="sector" class="form-button">SECTOR COMERCIAL</button>
                 <button id="country" class="form-button">PAIS</button>
+                <button id="services" class="form-button">SERVICIOS</button>
                 <button id="service-value" class="form-button">VALOR DE SU SERVICIO PRINCIPAL</button>
             </div>
             <div id="sector-container" class="content hidden"></div>
             <div id="country-container" class="content hidden"></div>
+            <div id="services-container" class="content hidden"></div>
             <div id="service-value-container" class="content hidden">
                 <label for="expenses-input" class="input-label">Gasto presupestario de Marketing ultimo semestre</label>
                 <input type="text" id="expenses-input" name="expenses">
