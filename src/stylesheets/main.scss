@@ -8,6 +8,7 @@
 @use "bounce-rate";
 @use "sales";
 @use "projected-earnings";
+@use "form";
 
 .amcharts-credits, .andromeda-credits {
   margin: 0;
@@ -16,6 +17,10 @@
 
 .footer {
   margin-top: 1rem;
+
+  a {
+    color: black;
+  }
 }
 
 .container-title {
