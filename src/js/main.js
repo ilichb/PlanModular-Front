@@ -32,6 +32,16 @@ let roi = null;
 let selectedMicroServices = [];
 let name = null;
 let email = null;
+let phone = null;
+let company = null;
+
+let brandingPercentage = document.getElementById('pie-percentage');
+let organicGrowthPercentage = document.getElementById('organic-growth-pie');
+let totalGrowthPercentage = document.getElementById('total-growth-pie');
+let seoPercentage = document.getElementById('seo-pie');
+let salesPercentage = document.getElementById('sales-percentage');
+let projectedEarningsMoney = document.getElementById('projected-earnings-money');
+
 
 let dashboard = document.getElementById('dashboard');
 let form = document.getElementById('form');
@@ -64,6 +74,8 @@ let roiInput = document.getElementById('roi-input');
 
 let emailInput = document.getElementById('email-input');
 let nameInput = document.getElementById('name-input');
+let phoneInput = document.getElementById('phone-input');
+let companyInput = document.getElementById('company-input');
 
 let submitButton = document.getElementById('submit-button');
 let signupButton = document.getElementById('submit-signup-button');
@@ -258,19 +270,36 @@ resetButton.addEventListener('click', function () {
 signupButton.addEventListener('click', function (){
     name = nameInput.value;
     email = emailInput.value;
+    phone = phoneInput.value;
+    company = companyInput.value;
 
     if(name === null || name === '' || email === null || email === '') {
         errorMessageSignup.innerHTML = 'Missing fields';
     } else {
-        errorMessageSignup.innerHTML = '';
-        signupForm.classList.add('su-hidden');
-        signupForm.classList.remove('su-visible');
-        thankYouMessage.classList.add('t-visible');
-        thankYouMessage.classList.remove('t-hidden')
-        console.log({
-            name,
-            email
+        fetch('index.php?option=com_ajax&plugin=pluginMicroservicios&format=json', {
+            method: 'POST',
+            body: {
+                name,
+                email,
+                phone,
+                company,
+            },
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
         })
+            .then(response => {
+                errorMessageSignup.innerHTML = '';
+                signupForm.classList.add('su-hidden');
+                signupForm.classList.remove('su-visible');
+                thankYouMessage.classList.add('t-visible');
+                thankYouMessage.classList.remove('t-hidden')
+            })
+            .catch(err => {
+                console.log(err)
+                alert(err.message);
+            })
+
     }
 
 })
@@ -287,24 +316,59 @@ submitButton.addEventListener('click', function () {
 
     expenses = expensesInput.value;
     roi = roiInput.value;
-    if(selectedCommercialSector === null || selectedCountry === null || expenses === null || roi === null || selectedMicroServices.length === 0){
+    if(selectedCommercialSector === null || selectedCountry === null || expenses === null || expenses === '' || roi === null || roi === '' || selectedMicroServices.length === 0){
         errorMessage.innerHTML = 'Missing fields';
         testSector.innerHTML = '';
         testCountry.innerHTML = '';
         testExpenses.innerHTML = '';
         testRoi.innerHTML = '';
     } else {
+        fetch('index.php?option=com_ajax&plugin=pluginMicroservicios&format=json', {
+            method: 'POST',
+            body: {
+                selectedCommercialSector,
+                selectedCountry,
+                expenses,
+                roi,
+                selectedMicroServices,
+            },
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                branding = data.branding;
+                brandingPercentage.innerHTML = `${data.branding}%`;
+                organicGrowth = data.organicGrowth;
+                organicGrowthPercentage.innerHTML = `${data.organicGrowth}%`;
+                totalGrowth = data.totalGrowth;
+                totalGrowthPercentage.innerHTML = `${data.totalGrowth}%`;
+                seoLevel = data.seoLevel;
+                seoPercentage.innerHTML = `${data.seoLevel}%`;
+                countriesList = data.countriesList;
+                sales = data.sales;
+                salesPercentage.innerHTML = `${data.sales}%`;
+                projectedEarnings = data.projectedEarnings;
+                projectedEarningsMoney.innerHTML = `${data.projectedEarnings}%`;
+
+                errorMessage.innerHTML = '';
+                dashboard.classList.add('d-visible');
+                dashboard.classList.remove('d-hidden');
+                form.classList.add('f-hidden')
+                form.classList.remove('f-visible');
+                signupForm.classList.add('su-visible')
+                signupForm.classList.remove('su-hidden')
+            })
+            .catch(err => {
+                console.log(err)
+                alert(err.message);
+
+            })
         // testSector.innerHTML = selectedCommercialSector;
         // testCountry.innerHTML = selectedCountry;
         // testExpenses.innerHTML = expenses;
         // testRoi.innerHTML = roi;
-        errorMessage.innerHTML = '';
-        dashboard.classList.add('d-visible');
-        dashboard.classList.remove('d-hidden');
-        form.classList.add('f-hidden')
-        form.classList.remove('f-visible');
-        signupForm.classList.add('su-visible')
-        signupForm.classList.remove('su-hidden')
     }
 });
 

@@ -26,7 +26,7 @@
                                 <p class="branding-container-title">RECONOCMIENTO DE MARCA</p>
                                 <div class="branding-chart-container">
                                     <div id="branding-pie"></div>
-                                    <p class="pie-percentage"><?= $branding ?>%</p>
+                                    <p id="pie-percentage" class="pie-percentage"></p>
                                 </div>
                             </div>
                             <div class="organic-growth-container">
@@ -34,7 +34,7 @@
                                     <p class="organic-growth-container-title">CRECIMIENTO ORGANICO</p>
                                     <div class="organic-growth-pie-chart-container">
                                         <div id="organic-growth-pie"></div>
-                                        <p class="pie-percentage"><?= $organic_growth ?>%</p>
+                                        <p id="organic-growth-pie" class="pie-percentage"></p>
                                     </div>
                                 </div>
                                 <div id="organic-growth-linear"></div>
@@ -52,7 +52,7 @@
                                     <p class="total-growth-container-title">CRECIMIENTO TOTAL</p>
                                     <div class="total-growth-pie-chart-container">
                                         <div id="total-growth-pie"></div>
-                                        <p class="pie-percentage"><?= $total_growth ?>%</p>
+                                        <p id="total-growth-pie" class="pie-percentage"></p>
                                     </div>
                                 </div>
                                 <div id="total-growth-linear"></div>
@@ -61,7 +61,7 @@
                                 <p class="container-title">SEO</p>
                                 <div class="seo-pie-chart-container">
                                     <div id="seo-pie"></div>
-                                    <p class="pie-percentage"><?= $seo_level ?>%</p>
+                                    <p id="seo-pie" class="pie-percentage"></p>
                                 </div>
                             </div>
                         </div>
@@ -83,14 +83,14 @@
                             <p class="container-title">VENTAS 1er TRIMESTRE</p>
                             <div class="sales-pie-chart-container">
                                 <div id="sales-pie"></div>
-                                <p class="sales-block-percentage"><?= $sales ?>%</p>
+                                <p id="sales-percentage" class="sales-block-percentage"></p>
                             </div>
                             <div id="sales-bar"></div>
                         </div>
                         <div class="projected-earnings-container">
                             <div class="projected-earnings-box">
                                 <p class="container-title">GANANCIAS PROYECTADAS</p>
-                                <p class="projected-earnings-amount">$<?= $projected_earnings ?></p>
+                                <p id="projected-earnings-money" class="projected-earnings-amount"></p>
                             </div>
                             <div id="projected-earnings-linear"></div>
                         </div>
@@ -127,11 +127,18 @@
         </div>
         <div id="signup-form" >
             <div id="sign-up-container" class="su-hidden">
-                <label for="name-input" class="input-label">Tu nombre</label>
+                <label for="name-input" class="input-label">Nombre</label>
                 <input type="text" id="name-input" name="name">
 
-                <label for="email-input" class="input-label">Tu correo</label>
+                <label for="email-input" class="input-label">Correo</label>
                 <input type="text" id="email-input" name="email">
+
+                <label for="phone-input" class="input-label">Telefono</label>
+                <input type="text" id="phone-input" name="phone">
+
+                <label for="company-input" class="input-label">Compañia</label>
+                <input type="text" id="company-input" name="company">
+
 
                 <div class="submit-button-container">
                     <button id="submit-signup-button" class="submit-button">ENVIAR</button>
@@ -148,14 +155,14 @@
             <p class="andromeda-credits">© 2023 Andromeda. All rights reserved.</p>
         </div>
     </div>
-
     <script>
-        let branding = <?= $branding ?>;
-        let organicGrowth = <?= $organic_growth ?>;
-        let totalGrowth = <?= $total_growth ?>;
-        let seoLevel = <?= $seo_level ?>;
-        let countriesList = <?= $countries_list ?>;
-        let sales = <?= $sales ?>;
+        let branding;
+        let organicGrowth;
+        let totalGrowth;
+        let seoLevel;
+        let countriesList;
+        let sales;
+        let projectedEarnings;
     </script>
     <script src="bundle.js"></script>
 </body>
